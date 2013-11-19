@@ -1,5 +1,6 @@
 #!/bin/bash
 # see http://phantomjs.org/build.html
+set -e
 
 pushd /tmp
 
@@ -7,14 +8,15 @@ pushd /tmp
 sudo apt-get update
 sudo apt-get install build-essential chrpath git-core libssl-dev libfontconfig1-dev
 
-# clone the repository, compile and install
-git clone git://github.com/ariya/phantomjs.git
-cd phantomjs
-git checkout 1.9
-./build.sh
-cd ..
+# download phantomjs and decompress
+wget https://phantomjs.googlecode.com/files/phantomjs-1.9.2-linux-x86_64.tar.bz2
+tar xjf phantomjs-1.9.2-linux-x86_64.tar.bz2
+
+# install binary
+sudo install -t /usr/local/bin phantomjs-1.9.2-linux-x86_64/bin/phantomjs
 
 # cleanup after ourselves
-rm -rf phantomjs
+rm -rf phantomjs-1.9.2-linux-x86_64
+rm phantomjs-1.9.2-linux-x86_64.tar.bz2
 
 popd
