@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 # see http://phantomjs.org/build.html
 set -e
 
