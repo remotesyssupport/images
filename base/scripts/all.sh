@@ -7,7 +7,7 @@ set -e
 # injected into the container (see DOCKERFILE)
 chmod 440 /etc/sudoers
 chown -R root:root /etc/sudoers
-chmod +x /etc/init.d/*.sh
+chmod +x /etc/init.d/xvfb
 
 # update packages
 sudo apt-get update
