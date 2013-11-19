@@ -1,4 +1,4 @@
 FROM bradrydzewski/ubuntu
-ADD scripts /var/cache/drone
 ADD resources /
-RUN /bin/bash /var/cache/drone/scripts/all.sh
+ADD scripts /var/cache/drone/scripts
+RUN cd /var/cache/drone/scripts && chmod +x *.sh && ./all.sh
