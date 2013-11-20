@@ -7,11 +7,10 @@ We create a root Ubuntu image using the Ubuntu Cloud ISO. This means
 our root image will be almost identical to an Ubuntu 12.04 Amazon AMI,
 but with added software packages (git, svn, hg, bzr, xvfb).
 
-The following script will create and import the image:
+We recommend installing this image directly from the Docker index:
 
 ```
-cd ubuntu
-sudo ./setup.sh
+sudo docker pull bradrydzewski/ubuntu
 ```
 
 ## base
@@ -31,7 +30,19 @@ are intended to build and test your code.
 Go Images
 
 ```
-sudo docker build -rm -t bradrydzewski/go:1.0 builder/go_1.0/Dockerfile
-sudo docker build -rm -t bradrydzewski/go:1.1 builder/go_1.1/Dockerfile
-sudo docker build -rm -t bradrydzewski/go:1.2 builder/go_1.2/Dockerfile
+sudo docker build -rm -t bradrydzewski/go:1.0 builder/golang/go_1.0/
+sudo docker build -rm -t bradrydzewski/go:1.1 builder/golang/go_1.1/
+sudo docker build -rm -t bradrydzewski/go:1.2 builder/golang/go_1.2/
+```
+
+Python Images
+
+```
+TODO
+```
+
+Ruby Images
+
+```
+TODO
 ```
