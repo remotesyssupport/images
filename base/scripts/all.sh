@@ -34,10 +34,10 @@ sudo apt-get -qq update
 # WARNING: ITEMS BELOW WILL CHANGE OVER TIME
 
 # install browsers
-#./chromium.sh
-#./firefox.sh
-#./chrome.sh
-#./phantomjs.sh
+./chromium.sh
+./firefox.sh
+./chrome.sh
+./phantomjs.sh
 
 # install base languages
 ./openjdk.sh

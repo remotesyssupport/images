@@ -20,7 +20,7 @@ We create a base image with common compilers (gcc), toolchains (make, cmake, etc
 libraries (libcurl, libssl, etc) and base languages (python, ruby, go, java, node).
 
 ```
-sudo docker build -rm -t drone/base base/Dockerfile
+sudo docker build -rm -t bradrydzewski/base base/Dockerfile
 ```
 
 ## builders
@@ -28,8 +28,10 @@ sudo docker build -rm -t drone/base base/Dockerfile
 We create language-specific Docker images from the `base` image. These images
 are intended to build and test your code.
 
-Example:
+Go Images
 
 ```
-sudo docker build -rm -t drone/node:0.11 base/node0.11/Dockerfile
+sudo docker build -rm -t bradrydzewski/go:1.0 builder/go_1.0/Dockerfile
+sudo docker build -rm -t bradrydzewski/go:1.1 builder/go_1.1/Dockerfile
+sudo docker build -rm -t bradrydzewski/go:1.2 builder/go_1.2/Dockerfile
 ```
