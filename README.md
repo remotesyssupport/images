@@ -38,7 +38,12 @@ sudo docker build -rm -t bradrydzewski/go:1.2 builder/golang/go_1.2/
 Python Images
 
 ```
-TODO
+sudo docker build -rm -t bradrydzewski/python builder/python/python/
+sudo docker build -rm -t bradrydzewski/python:2.6 builder/python/python_2.6/
+sudo docker build -rm -t bradrydzewski/python:2.7 builder/python/python_2.7/
+sudo docker build -rm -t bradrydzewski/python:3.1 builder/python/python_3.1/
+sudo docker build -rm -t bradrydzewski/python:3.2 builder/python/python_3.2/
+sudo docker build -rm -t bradrydzewski/python:3.3 builder/python/python_3.3/
 ```
 
 Ruby Images
