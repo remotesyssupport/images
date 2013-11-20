@@ -4,7 +4,7 @@
 sudo apt-get -y install pkg-config
 
 # download and install Go binaries
-wget https://go.googlecode.com/files/go1.1.2.linux-amd64.tar.gz --quiet
+wget http://go.googlecode.com/files/go1.1.2.linux-amd64.tar.gz --quiet
 sudo tar -C /usr/lib -xzf go1.1.2.linux-amd64.tar.gz
 rm go1.1.2.linux-amd64.tar.gz
 
