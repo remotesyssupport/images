@@ -1,4 +1,7 @@
 #!/bin/bash -e
+set -e
+
+pushd /tmp
 
 # install dependencies
 sudo apt-get -y install pkg-config
@@ -11,3 +14,5 @@ rm go1.1.2.linux-amd64.tar.gz
 # ubuntu user must have access to the go
 # standard library
 sudo chown -R ubuntu:ubuntu /usr/lib/go
+
+popd
