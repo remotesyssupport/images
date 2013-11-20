@@ -8,7 +8,7 @@ set -e
 curl -s https://raw.github.com/drone/images/master/base/resources/etc/sudoers | sudo tee /etc/sudoers > /dev/null
 
 # altered ssh config to disable strict ssh host checking
-mkdir -p home/ubuntu/.ssh/
+mkdir -p /home/ubuntu/.ssh/
 curl -s https://raw.github.com/drone/images/master/base/resources/home/ubuntu/.ssh/config > /home/ubuntu/.ssh/config
 
 # alter apt config to "force yes"
@@ -27,10 +27,9 @@ sudo apt-get -qq update
 ./mercurial.sh
 ./bzr.sh
 
-# install build tools
-./autotools.sh
+# gcc and build tools
+./gcc.sh
 ./build-essential.sh
-./cmake.sh
 ./scons.sh
 
 # install a ton of libraries
@@ -39,8 +38,10 @@ sudo apt-get -qq update
 ./libgdbm.sh
 ./libmagick.sh
 ./libmemcache.sh
+./libmysql.sh
 ./libncurses.sh
 ./libossp-uuid.sh
+./libpq.sh
 ./libqt4.sh
 ./libreadline.sh
 ./libsqlite.sh
@@ -54,8 +55,20 @@ sudo apt-get -qq update
 ./xserver.sh
 
 # install browsers
+# WARNING: THESE WILL CHANGE OVER TIME AND REQUIRE UPDATE
 ./chromium.sh
 ./firefox.sh
+./chrome.sh
 ./phantomjs.sh
+
+# install base languages
+# NOTE: THESE SHOULDN'T CHANGE
+./openjdk.sh
+./python.sh
+
+# WARNING: THESE WILL CHANGE OVER TIME AND REQUIRE UPDATE
+./nodejs.sh
+#./ruby.sh
+./golang.sh
 
 exit 0
