@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # installs the GNU C compiler
-sudo apt-get -y install gcc
+sudo apt-get -y install gcc clang
 
 # the debian repository suggests we install autotools:
 sudo apt-get -y install automake autoconf autogen libtool

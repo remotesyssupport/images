@@ -40,11 +40,11 @@ sudo apt-get -qq update
 #./phantomjs.sh
 
 # install base languages
-#./openjdk.sh
-#./python.sh
-#./nodejs.sh
-#./ruby.sh
-#./golang.sh
+./openjdk.sh
+./python.sh
+./nodejs.sh
+./ruby.sh
+./golang.sh
 
 
 # browser.sh   (chromium, chrome, firefox, phantomjs)

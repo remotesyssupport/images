@@ -28,6 +28,8 @@ sudo docker build -rm -t drone/base base/Dockerfile
 We create language-specific Docker images from the `base` image. These images
 are intended to build and test your code.
 
+Example:
+
 ```
 sudo docker build -rm -t drone/node:0.11 base/node0.11/Dockerfile
 ```
