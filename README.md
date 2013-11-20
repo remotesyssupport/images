@@ -1,4 +1,5 @@
-
+Scripts and Dockerfiles used to generate build machines for the Drone
+Continuous Integration server.
 
 ## ubuntu
 
@@ -19,14 +20,14 @@ We create a base image with common compilers (gcc), toolchains (make, cmake, etc
 libraries (libcurl, libssl, etc) and base languages (python, ruby, go, java, node).
 
 ```
-cd base
-sudo docker build -rm -t drone/base .
+sudo docker build -rm -t drone/base base/Dockerfile
 ```
 
-## languages
+## builders
 
-We create language-specific Docker images from the `base` image.
+We create language-specific Docker images from the `base` image. These images
+are intended to build and test your code.
 
 ```
-TODO
+sudo docker build -rm -t drone/node:0.11 base/node0.11/Dockerfile
 ```
