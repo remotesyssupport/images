@@ -2,7 +2,6 @@
 # Creates a container using an Ubuntu Cloud ISO and then
 # imports into Docker. This will provide an image that
 # is nearly identical to an Amazon (or Rackspace) Ubuntu AMI.
-cd /tmp
 
 DOCKER_USER=bradrydzewski
 UBUNTU_RELEASE=precise
@@ -25,7 +24,8 @@ chroot $CONTAINER_DIR dpkg-divert --local --rename --add /sbin/initctl
 chroot $CONTAINER_DIR ln -s /bin/true /sbin/initctl
 
 # override configurations
-chroot $CONTAINER_DIR -- mkdir -p /home/ubuntu/.ssh && chown -R ubuntu:ubuntu .ssh
+chroot $CONTAINER_DIR mkdir -p /home/ubuntu/.ssh
+chroot $CONTAINER_DIR chown -R ubuntu:ubuntu /home/ubuntu/.ssh
 cat rootfs/etc/sudoers > $CONTAINER_DIR/etc/sudoers
 cat rootfs/etc/init.d/xvfb > $CONTAINER_DIR/etc/init.d/xvfb
 cat rootfs/etc/apt/apt.conf.d/90forceyes > $CONTAINER_DIR/etc/apt/apt.conf.d/90forceyes
@@ -33,11 +33,24 @@ cat rootfs/home/ubuntu/.bashrc > $CONTAINER_DIR/home/ubuntu/.bashrc
 cat rootfs/home/ubuntu/.gitconfig > $CONTAINER_DIR/home/ubuntu/.gitconfig
 cat rootfs/home/ubuntu/.ssh/config > $CONTAINER_DIR/home/ubuntu/.ssh/config
 
+# add resolve.conf
+mv $CONTAINER_DIR/etc/resolv.conf $CONTAINER_DIR/etc/resolv.conf.bak
+cat rootfs/etc/resolv.conf > $CONTAINER_DIR/etc/resolv.conf
+
 # install essential command binaries (scm, xserver)
-chroot $CONTAINER_DIR -- apt-get -y install git git-core subversion mercurial bzr fossil xvfb
+chroot $CONTAINER_DIR apt-get update
+chroot $CONTAINER_DIR apt-get -y install git git-core subversion mercurial bzr fossil xvfb
+
+# remove resolv.conf
+chroot $CONTAINER_DIR rm /etc/resolv.conf
+mv $CONTAINER_DIR/etc/resolv.conf.bak $CONTAINER_DIR/etc/resolv.conf
 
 # tar the container
 tar -czf $CONTAINER_NAME.tar -C $CONTAINER_DIR .
 
 # import the container into docker
 cat $CONTAINER_NAME.tar | docker import - $DOCKER_USER/$CONTAINER_NAME
+
+# cleanup after ourselves
+rm $CONTAINER_NAME.tar
+lxc-destroy -n $CONTAINER_NAME
