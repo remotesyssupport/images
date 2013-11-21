@@ -1,6 +1,5 @@
-FROM bradrydzewski/kerl
-USER ubuntu
-WORKDIR /home/ubuntu
+FROM bradrydzewski/erlang
+ADD .dronerc /home/ubuntu/
 
 RUN kerl build R16B01 R16B01 && /
 	sudo mkdir /opt/R16B01 && /
