@@ -1,4 +1,4 @@
-FROM bradrydzewski/base
+FROM bradrydzewski/node
 ADD .dronerc /home/ubuntu/
 
-RUN . /home/ubuntu/nvm/nvm.sh && nvm install v0.6.21
+RUN /bin/bash -c ". /home/ubuntu/nvm/nvm.sh && nvm install v0.6.21"
