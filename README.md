@@ -27,31 +27,11 @@ sudo docker build -rm -t bradrydzewski/base base/Dockerfile
 We create language-specific Docker images from the `base` image. These images
 are intended to build and test your code.
 
-Go Images
+Dart Images
 
-```sh
-sudo docker build -rm -t bradrydzewski/go:1.0 builder/golang/go_1.0/
-sudo docker build -rm -t bradrydzewski/go:1.1 builder/golang/go_1.1/
-sudo docker build -rm -t bradrydzewski/go:1.2 builder/golang/go_1.2/
 ```
-
-Node Images
-
-```sh
-sudo docker build -rm -t bradrydzewski/node builder/node/node/
-sudo docker build -rm -t bradrydzewski/node:0.10 builder/node/node_0.10/
-sudo docker build -rm -t bradrydzewski/node:0.8  builder/node/node_0.8/
-sudo docker build -rm -t bradrydzewski/node:0.6  builder/node/node_0.6/
-```
-
-Python Images
-
-```sh
-sudo docker build -rm -t bradrydzewski/python builder/python/python/
-sudo docker build -rm -t bradrydzewski/python:2.6 builder/python/python_2.6/
-sudo docker build -rm -t bradrydzewski/python:2.7 builder/python/python_2.7/
-sudo docker build -rm -t bradrydzewski/python:3.2 builder/python/python_3.2/
-sudo docker build -rm -t bradrydzewski/python:3.3 builder/python/python_3.3/
+sudo docker build -rm -t bradrydzewski/dart     builder/dart/dart_stable/
+sudo docker build -rm -t bradrydzewski/dart:dev builder/dart/dart_dev/
 ```
 
 Erlang Images
@@ -72,60 +52,48 @@ sudo docker build -rm -t bradrydzewski/erlang:R14B01 builder/erlang/erlang_R14B0
 sudo docker build -rm -t bradrydzewski/erlang:R14A   builder/erlang/erlang_R14A/
 ```
 
+Go Images
+
+```sh
+sudo docker build -rm -t bradrydzewski/go:1.0 builder/golang/go_1.0/
+sudo docker build -rm -t bradrydzewski/go:1.1 builder/golang/go_1.1/
+sudo docker build -rm -t bradrydzewski/go:1.2 builder/golang/go_1.2/
+```
+
 Haskell Images
 
 ```sh
 sudo docker build -rm -t bradrydzewski/haskell builder/haskell/haskell_7.4/
 ```
 
+Node Images
 
-
-Ruby Images
-
+```sh
+sudo docker build -rm -t bradrydzewski/node builder/node/node/
+sudo docker build -rm -t bradrydzewski/node:0.10 builder/node/node_0.10/
+sudo docker build -rm -t bradrydzewski/node:0.8  builder/node/node_0.8/
+sudo docker build -rm -t bradrydzewski/node:0.6  builder/node/node_0.6/
 ```
+
+Python Images
+
+```sh
+sudo docker build -rm -t bradrydzewski/python builder/python/python/
+sudo docker build -rm -t bradrydzewski/python:2.6 builder/python/python_2.6/
+sudo docker build -rm -t bradrydzewski/python:2.7 builder/python/python_2.7/
+sudo docker build -rm -t bradrydzewski/python:3.2 builder/python/python_3.2/
+sudo docker build -rm -t bradrydzewski/python:3.3 builder/python/python_3.3/
+sudo docker build -rm -t bradrydzewski/pypy builder/python/pypy/
+```
+
+
 TODO
-```
 
-Dart Images
-
-```
-TODO
-```
-
-Perl Images
-
-```
-TODO
-```
-
-PHP Images
-
-```
-TODO
-```
-
-Java Images
-
-```
-TODO
-```
-
-Groovy Images
-
-```
-TODO
-```
-
-Clojure Images
-
-```
-TODO
-```
-
-Scala Images
-
-```
-TODO
-```
-
-
+* PHP
+* Perl
+* Ruby
+* Rust
+* Java
+* Clojure
+* Scala
+* Groovy
