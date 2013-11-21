@@ -25,13 +25,13 @@ chroot $CONTAINER_DIR ln -s /bin/true /sbin/initctl
 
 # override configurations
 chroot $CONTAINER_DIR mkdir -p /home/ubuntu/.ssh
-chroot $CONTAINER_DIR chown -R ubuntu:ubuntu /home/ubuntu/.ssh
 cat rootfs/etc/sudoers > $CONTAINER_DIR/etc/sudoers
 cat rootfs/etc/init.d/xvfb > $CONTAINER_DIR/etc/init.d/xvfb
 cat rootfs/etc/apt/apt.conf.d/90forceyes > $CONTAINER_DIR/etc/apt/apt.conf.d/90forceyes
 cat rootfs/home/ubuntu/.bashrc > $CONTAINER_DIR/home/ubuntu/.bashrc
 cat rootfs/home/ubuntu/.gitconfig > $CONTAINER_DIR/home/ubuntu/.gitconfig
 cat rootfs/home/ubuntu/.ssh/config > $CONTAINER_DIR/home/ubuntu/.ssh/config
+chroot $CONTAINER_DIR chown -R ubuntu:ubuntu /home/ubuntu
 
 # backup the symlinked resolv.conf
 # and override default resolve.conf
@@ -40,7 +40,7 @@ cat rootfs/etc/resolv.conf > $CONTAINER_DIR/etc/resolv.conf
 
 # install essential command binaries (scm, xserver)
 chroot $CONTAINER_DIR apt-get update
-chroot $CONTAINER_DIR apt-get -y install git git-core subversion mercurial bzr fossil xvfb
+chroot $CONTAINER_DIR apt-get -y install git git-core subversion mercurial bzr fossil xvfb socat
 
 # remove resolv.conf and restore backup
 chroot $CONTAINER_DIR rm /etc/resolv.conf
