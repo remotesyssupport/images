@@ -37,8 +37,11 @@ sudo docker build -rm -t bradrydzewski/go:1.2 builder/golang/go_1.2/
 
 Node Images
 
-```
-TODO
+```sh
+sudo docker build -rm -t bradrydzewski/node builder/node/node/
+sudo docker build -rm -t bradrydzewski/node:0.10 builder/python/node_0.10/
+sudo docker build -rm -t bradrydzewski/node:0.8  builder/python/node_0.8/
+sudo docker build -rm -t bradrydzewski/node:0.6  builder/python/node_0.6/
 ```
 
 Python Images
@@ -83,7 +86,19 @@ Ruby Images
 TODO
 ```
 
+Dart Images
+
+```
+TODO
+```
+
 Perl Images
+
+```
+TODO
+```
+
+PHP Images
 
 ```
 TODO
