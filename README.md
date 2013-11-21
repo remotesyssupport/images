@@ -101,7 +101,6 @@ sudo docker build -rm -t bradrydzewski/python:3.3  builder/python/python_3.3/
 sudo docker build -rm -t bradrydzewski/python:pypy builder/python/pypy/
 ```
 
-
 TODO
 
 * Java

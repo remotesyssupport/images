@@ -11,7 +11,6 @@ RUN sudo add-apt-repository -y ppa:ondrej/php5              && \
 
 # install phpbuild 
 RUN git clone git://github.com/CHH/php-build.git            && \
-    cd php-build                                            && \
     sudo php-build/install.sh                               && \
     sudo chown -R ubuntu:ubuntu /usr/local/share/php-build  && \
     rm -rf php-build/
@@ -23,16 +22,15 @@ RUN git clone https://github.com/CHH/phpenv.git             && \
 
 # install default php version
 RUN export PATH=$PATH:/home/ubuntu/.phpenv/bin                                     && \
-		phpenv init -                                                              && \
-		phpenv rehash                                                              && \
 		php-build -i development --pear 5.5.6 /home/ubuntu/.phpenv/versions/5.5.6  && \
 		sed -i  's/128M/512M/' /home/ubuntu/.phpenv/versions/5.5.6/etc/php.ini     && \
+		phpenv init -                                                              && \
 		phpenv rehash
 
 # install composer
-RUN curl -sS https://getcomposer.org/installer | php   && \
-    sudo mv composer.phar /usr/local/bin/composer      && \
-    sudo chmod +x /usr/local/bin/composer              && \
-    sudo pear config-set auto_discover 1               && \
-    sudo pear install phpunit/PHPUnit                  && \
-    sudo pear install phpunit/DbUnit
+#RUN curl -sS https://getcomposer.org/installer | php   && \
+#    sudo mv composer.phar /usr/local/bin/composer      && \
+#    sudo chmod +x /usr/local/bin/composer              && \
+#    sudo pear config-set auto_discover 1               && \
+#    sudo pear install phpunit/PHPUnit                  && \
+#    sudo pear install phpunit/DbUnit
