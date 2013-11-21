@@ -68,3 +68,9 @@ sudo docker build -rm -t bradrydzewski/erlang:R14B02 builder/erlang/erlang_R14B0
 sudo docker build -rm -t bradrydzewski/erlang:R14B01 builder/erlang/erlang_R14B01/
 sudo docker build -rm -t bradrydzewski/erlang:R14A builder/erlang/erlang_R14A/
 ```
+
+Haskell Images
+
+```
+sudo docker build -rm -t bradrydzewski/haskell builder/haskell/haskell_7.4/
+```
