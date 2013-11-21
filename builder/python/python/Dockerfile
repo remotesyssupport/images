@@ -2,6 +2,8 @@ FROM bradrydzewski/base
 WORKDIR /home/ubuntu
 USER ubuntu
 
+ADD .dronerc /home/ubuntu/
+
 RUN sudo easy_install virtualenv
 RUN sudo add-apt-repository --yes ppa:fkrull/deadsnakes
 
