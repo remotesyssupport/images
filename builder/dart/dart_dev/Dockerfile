@@ -5,7 +5,7 @@ ADD .dronerc /home/ubuntu/
 
 RUN wget http://storage.googleapis.com/dart-archive/channels/dev/release/latest/editor/darteditor-linux-x64.zip --quiet && \
     unzip darteditor-linux-x64 "-d" /home/ubuntu && \
-    rm darteditor-linux-x64.zip && \
+    rm darteditor-linux-x64.zip
 
 # install content_shell
 RUN dart/chromium/download_contentshell.sh && \
