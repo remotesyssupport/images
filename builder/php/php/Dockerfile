@@ -1,4 +1,4 @@
-FROM bradrydzewski/php
+FROM bradrydzewski/base
 WORKDIR /home/ubuntu
 USER ubuntu
 ADD .dronerc /home/ubuntu/
