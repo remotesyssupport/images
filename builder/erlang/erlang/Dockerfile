@@ -17,4 +17,4 @@ RUN curl -O https://raw.github.com/spawngrid/kerl/master/kerl && \
 RUN kerl build R16B02 R16B02 && \
 	sudo mkdir /opt/R16B02 && \
 	sudo chown -R 1000:1000 /opt/R16B02 && \
-	kerl install R16B01 /opt/R16B02
+	kerl install R16B02 /opt/R16B02
