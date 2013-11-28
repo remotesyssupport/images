@@ -30,6 +30,9 @@ sudo apt-get -qq update
 ./libzmq.sh
 ./zlib.sh
 
+# database clients
+./mysql-cli.sh
+
 
 # WARNING: ITEMS BELOW WILL CHANGE OVER TIME
 
