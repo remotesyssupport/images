@@ -32,7 +32,7 @@ sudo apt-get -qq update
 
 # database clients
 ./mysql-cli.sh
-
+./postgres-client.sh
 
 # WARNING: ITEMS BELOW WILL CHANGE OVER TIME
 
