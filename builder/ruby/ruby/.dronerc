@@ -20,9 +20,9 @@ export PATH=$PATH:$GOROOT/bin
 export PATH="$HOME/.rbenv/bin:$PATH"
 
 # set default env vars
-export RBENV_VERSION=2.0.0-p195
+export RBENV_VERSION=2.0.0-p353
 export RAILS_ENV=test
 
 # initialize and set ruby version
 /home/ubuntu/.rbenv/bin/rbenv init -
-/home/ubuntu/.rbenv/bin/rbenv global 2.0.0-p195
+/home/ubuntu/.rbenv/bin/rbenv global 2.0.0-p353
