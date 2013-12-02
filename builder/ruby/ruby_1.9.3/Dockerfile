@@ -14,5 +14,4 @@ RUN export PATH=$PATH:/home/ubuntu/.rbenv/bin                                   
     gem update --system                                                               && \
     rbenv rehash                                                                      && \
     gem install bundler                                                               && \
-    gem install rake                                                                  && \
     rbenv rehash
