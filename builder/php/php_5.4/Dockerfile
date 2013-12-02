@@ -1,4 +1,7 @@
 FROM bradrydzewski/php
+
+WORKDIR /home/ubuntu
+USER ubuntu
 ADD .dronerc /home/ubuntu/
 
 RUN export PATH=$PATH:/home/ubuntu/.phpenv/bin                                   && \

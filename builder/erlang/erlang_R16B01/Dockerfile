@@ -1,4 +1,7 @@
 FROM bradrydzewski/erlang
+
+WORKDIR /home/ubuntu
+USER ubuntu
 ADD .dronerc /home/ubuntu/
 
 RUN kerl build R16B01 R16B01 && \
