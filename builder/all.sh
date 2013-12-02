@@ -22,7 +22,7 @@ sudo docker build -rm -t bradrydzewski/go:1.1 builder/golang/go_1.1/
 ##################################################################################
 # Haskell Images
 
-sudo docker build -rm -t bradrydzewski/haskell builder/haskell/haskell_7.4/
+sudo docker build -rm -t bradrydzewski/haskell:7.4 builder/haskell/haskell_7.4/
 
 ##################################################################################
 # Node Images
@@ -60,10 +60,10 @@ sudo docker build -rm -t bradrydzewski/ruby:2.0.0  builder/ruby/ruby_2.0.0/
 ##################################################################################
 # Java Images
 
-sudo docker build -rm -t bradrydzewski/java:oraclejdk8  builder/java/java_oraclejdk7/
-sudo docker build -rm -t bradrydzewski/java:oraclejdk7  builder/java/java_oraclejdk7/
-sudo docker build -rm -t bradrydzewski/java:openjdk7  builder/java/java_openjdk7/
-sudo docker build -rm -t bradrydzewski/java:openjdk6  builder/java/java_openjdk6/
+#sudo docker build -rm -t bradrydzewski/java:oraclejdk8  builder/java/java_oraclejdk7/
+#sudo docker build -rm -t bradrydzewski/java:oraclejdk7  builder/java/java_oraclejdk7/
+#sudo docker build -rm -t bradrydzewski/java:openjdk7  builder/java/java_openjdk7/
+#sudo docker build -rm -t bradrydzewski/java:openjdk6  builder/java/java_openjdk6/
 
 ##################################################################################
 # Scala Images
@@ -84,8 +84,8 @@ sudo docker build -rm -t bradrydzewski/lein builder/clojure/lein/
 ##################################################################################
 # GCC Images
 
-#sudo docker build -rm -t bradrydzewski/gcc:4.6  builder/gcc/gcc_4.6/
-#sudo docker build -rm -t bradrydzewski/gcc:4.8  builder/gcc/gcc_4.8/
+sudo docker build -rm -t bradrydzewski/gcc:4.6  builder/gcc/gcc_4.6/
+sudo docker build -rm -t bradrydzewski/gcc:4.8  builder/gcc/gcc_4.8/
 
 ##################################################################################
 # Erlang Images
