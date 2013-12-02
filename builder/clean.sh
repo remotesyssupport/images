@@ -1,5 +1,4 @@
 #!/bin/bash
-set -e
 
 # remove clojure image
 docker rmi bradrydzewski/lein
