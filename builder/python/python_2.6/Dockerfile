@@ -1,7 +1,7 @@
 FROM bradrydzewski/virtualenv
 WORKDIR /home/ubuntu
 USER ubuntu
-ADD .dronerc /home/ubuntu/
+ADD python.sh /etc/drone.d/
 
 # install python 2.6
 RUN sudo apt-get update && sudo apt-get install python2.6 python2.6-dev

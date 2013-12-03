@@ -1,7 +1,7 @@
 FROM bradrydzewski/virtualenv
 WORKDIR /home/ubuntu
 USER ubuntu
-ADD .dronerc /home/ubuntu/
+ADD python.sh /etc/drone.d/
 
 # install python 3.3
 RUN sudo apt-get update && sudo apt-get install python3.3 python3.3-dev

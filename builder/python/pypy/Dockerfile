@@ -1,7 +1,7 @@
 FROM bradrydzewski/virtualenv
 WORKDIR /home/ubuntu
 USER ubuntu
-ADD .dronerc /home/ubuntu/
+ADD python.sh /etc/drone.d/
 
 # install pypy
 RUN sudo add-apt-repository --yes ppa:pypy/ppa && \

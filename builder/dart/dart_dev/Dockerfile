@@ -1,7 +1,7 @@
 FROM bradrydzewski/base
 WORKDIR /home/ubuntu
 USER ubuntu
-ADD dart.sh /etc/profile.d/
+ADD dart.sh /etc/drone.d/
 
 RUN wget http://storage.googleapis.com/dart-archive/channels/dev/release/latest/editor/darteditor-linux-x64.zip --quiet && \
     unzip darteditor-linux-x64 "-d" /home/ubuntu && \

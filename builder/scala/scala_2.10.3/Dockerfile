@@ -2,6 +2,7 @@ FROM bradrydzewski/base
 
 WORKDIR /home/ubuntu
 USER ubuntu
+ADD scala.sh /etc/drone.d/
 
 RUN wget http://repo.scala-sbt.org/scalasbt/sbt-native-packages/org/scala-sbt/sbt/0.13.0/sbt.deb && \
     sudo dpkg -i sbt.deb                                                                         && \
