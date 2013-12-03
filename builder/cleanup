@@ -7,11 +7,62 @@ remove("lein");
 remove("dart:stable");
 remove("dart:dev");
 
+# erlang
+skip("erlang:R16B02");
+skip("erlang:R16B01");
+skip("erlang:R16B");
+skip("erlang:R15B");
+
+# gcc
+remove("gcc:4.6");
+remove("gcc:4.8");
+
 # golang
 remove("go:1.2");
 remove("go:1.1");
 remove("go:1.0");
 
+# groovy
+skip("groovy");
+
+# haskell
+remove("haskell:7.4");
+
+# java
+skip("java:openjdk6");
+skip("java:openjdk7");
+skip("java:oraclejdk7");
+skip("java:oraclejdk8");
+skip("java:android");
+
+# node
+remove("node");
+remove("node:0.10");
+remove("node:0.8");
+
+# php
+remove("php:5.4");
+remove("php:5.5");
+remove("php");
+
+# python
+remove("python:2.7");
+remove("python:3.2");
+remove("python:3.3");
+remove("python:pypy");
+remove("python");
+
+# ruby
+remove("ruby:1.9.3");
+remove("ruby:2.0.0");
+remove("ruby");
+
+# scala
+remove("scala:2.10.3");
+remove("scala:2.9.3");
+
+# base
+skip("base", "base/")
 
 # function to remove Docker images and print out
 # the result. If image removal fails, we'll print
@@ -31,4 +82,10 @@ sub remove {
 		print @result[-50 .. -1];
 		print "\033[31m ✗ FAILURE\033[0m $name\n";
 	}
+}
+
+sub skip {
+	$name=$_[0];
+	$path=$_[1];
+	print "\033[33m - SKIPPED\033[0m $name\n";
 }
