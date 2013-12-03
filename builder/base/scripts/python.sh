@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 
 # install python 2.7, headers, setuptools, etc
 sudo apt-get -y install python2.7 python-software-properties python-setuptools python-dev

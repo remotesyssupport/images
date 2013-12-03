@@ -6,6 +6,9 @@ set -e
 # update packages
 sudo apt-get -qq update
 
+# essential
+sudo apt-get -y install git git-core subversion mercurial bzr fossil xvfb socat
+
 # gcc and build tools
 ./gcc.sh
 ./build-essential.sh

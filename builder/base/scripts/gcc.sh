@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 
 # installs the GNU C compiler
 sudo apt-get -y install gcc clang
