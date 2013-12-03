@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 
 # base
-skip("base", "base/")
+skip("base", "base/");
 
 # clojure
 build("lein", "clojure/lein/");
