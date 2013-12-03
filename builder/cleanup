@@ -1,0 +1,34 @@
+#!/usr/bin/perl
+
+# clojure
+remove("lein");
+
+# dart
+remove("dart:stable");
+remove("dart:dev");
+
+# golang
+remove("go:1.2");
+remove("go:1.1");
+remove("go:1.0");
+
+
+# function to remove Docker images and print out
+# the result. If image removal fails, we'll print
+# out the stderr.
+sub remove {
+	$name=$_[0];
+
+	@result = `docker rmi bradrydzewski/$name 2>&1`;
+	if ( $? == 0 )
+	{
+		print "\033[32m ✓ REMOVED\033[0m $name\n";
+	}
+	else
+	{
+		# print only the last 50 lines of a failed
+		# container removal.
+		print @result[-50 .. -1];
+		print "\033[31m ✗ FAILURE\033[0m $name\n";
+	}
+}

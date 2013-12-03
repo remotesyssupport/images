@@ -23,7 +23,7 @@ sub build {
 	@result = `docker build -rm -t bradrydzewski/$name $path 2>&1`;
 	if ( $? == 0 )
 	{
-		print "\033[32m ✓ SUCCESS\033[0m $name\n";
+		print "\033[32m ✓ CREATED\033[0m $name\n";
 	}
 	else
 	{
