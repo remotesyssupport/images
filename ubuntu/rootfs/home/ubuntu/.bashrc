@@ -2,9 +2,19 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-# If not running interactively, manually override PS1
-# IMPORTANT: this was customized for the Drone CI server
-[ -z "$PS1" ] && export PS1='\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$'
+# Load default environemnt scripts to be used by the Drone
+# continuous integration system.
+if [ -d /etc/drone.d ]; then
+  for i in /etc/drone.d/*.sh; do
+    if [ -r $i ]; then
+      . $i
+    fi
+  done
+  unset i
+fi
+
+# If not running interactively, don't do anything
+[ -z "$PS1" ] && return
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
@@ -105,9 +115,4 @@ fi
 # sources /etc/bash.bashrc).
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
-fi
-
-# enable drone continouous integration support
-if [ -f ~/.dronerc ]; then
-    . ~/.dronerc
 fi
