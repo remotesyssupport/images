@@ -15,7 +15,10 @@ build("kerl",          "erlang/kerl/");
 build("erlang:R16B",   "erlang/erlang_R16B/");
 build("erlang:R16B02", "erlang/erlang_R16B02/");
 build("erlang:R16B01", "erlang/erlang_R16B01/");
-build("erlang:R15B",   "erlang/erlang_R15B/");
+skip("erlang:R15B",   "erlang/erlang_R15B/");
+skip("erlang:R15B03", "erlang/erlang_R15B03/");
+skip("erlang:R15B02", "erlang/erlang_R15B02/");
+skip("erlang:R15B01", "erlang/erlang_R15B01/");
 
 # gcc
 build("gcc:4.6", "gcc/gcc_4.6/");
