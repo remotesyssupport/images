@@ -30,10 +30,10 @@ skip("groovy");
 remove("haskell:7.4");
 
 # java
-skip("java:openjdk6");
-skip("java:openjdk7");
-skip("java:oraclejdk7");
-skip("java:oraclejdk8");
+remove("java:openjdk6");
+remove("java:openjdk7");
+remove("java:oraclejdk7");
+remove("java:oraclejdk8");
 skip("java:android");
 
 # node
