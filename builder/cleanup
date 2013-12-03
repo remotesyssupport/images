@@ -11,7 +11,7 @@ remove("dart:dev");
 remove("erlang:R16B02");
 remove("erlang:R16B01");
 remove("erlang:R16B");
-skip("erlang:R15B");
+remove("erlang:R15B");
 remove("kerl");
 
 # gcc

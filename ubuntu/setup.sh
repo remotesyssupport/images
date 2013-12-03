@@ -25,10 +25,13 @@ chroot $CONTAINER_DIR ln -s /bin/true /sbin/initctl
 
 # override configurations
 chroot $CONTAINER_DIR mkdir -p /home/ubuntu/.ssh
+chroot $CONTAINER_DIR mkdir -p /root/.ssh
 cat rootfs/etc/bash.bashrc > $CONTAINER_DIR/etc/bash.bashrc
 cat rootfs/etc/sudoers > $CONTAINER_DIR/etc/sudoers
 cat rootfs/etc/init.d/xvfb > $CONTAINER_DIR/etc/init.d/xvfb
 cat rootfs/etc/apt/apt.conf.d/90forceyes > $CONTAINER_DIR/etc/apt/apt.conf.d/90forceyes
+cat rootfs/root/.gitconfig > $CONTAINER_DIR/root/.gitconfig
+cat rootfs/root/.ssh/config > $CONTAINER_DIR/root/.ssh/config
 cat rootfs/home/ubuntu/.gitconfig > $CONTAINER_DIR/home/ubuntu/.gitconfig
 cat rootfs/home/ubuntu/.ssh/config > $CONTAINER_DIR/home/ubuntu/.ssh/config
 chroot $CONTAINER_DIR chown -R ubuntu:ubuntu /home/ubuntu
