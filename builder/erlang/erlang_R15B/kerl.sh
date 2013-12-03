@@ -1,0 +1,1 @@
+. /opt/R15B/activate

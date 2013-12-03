@@ -2,7 +2,7 @@ FROM bradrydzewski/kerl
 
 WORKDIR /home/ubuntu
 USER ubuntu
-ADD .dronerc /home/ubuntu/
+ADD kerl.sh /etc/drone.d/
 
 RUN kerl build R16B02 R16B02 && \
 	sudo mkdir /opt/R16B02 && \

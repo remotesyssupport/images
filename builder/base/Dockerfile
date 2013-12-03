@@ -9,5 +9,7 @@ ENV LANGUAGE en_US:en
 ENV LOGNAME ubuntu
 ENV TERM xterm
 
+ADD golang.sh /etc/drone.d/
+
 ADD scripts /var/cache/drone/scripts
 RUN cd /var/cache/drone/scripts && sudo chmod +x *.sh && ./all.sh
