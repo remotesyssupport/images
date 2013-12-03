@@ -62,7 +62,7 @@ remove("scala:2.10.3");
 remove("scala:2.9.3");
 
 # base
-skip("base", "base/")
+skip("base");
 
 # function to remove Docker images and print out
 # the result. If image removal fails, we'll print
@@ -77,15 +77,11 @@ sub remove {
 	}
 	else
 	{
-		# print only the last 50 lines of a failed
-		# container removal.
-		print @result[-50 .. -1];
 		print "\033[31m ✗ FAILURE\033[0m $name\n";
 	}
 }
 
 sub skip {
 	$name=$_[0];
-	$path=$_[1];
 	print "\033[33m - SKIPPED\033[0m $name\n";
 }
