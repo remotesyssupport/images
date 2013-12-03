@@ -39,7 +39,7 @@ build("haskell:7.4", "haskell/haskell_7.4/");
 build("java:openjdk6",   "java/java_openjdk6/");
 build("java:openjdk7",   "java/java_openjdk7/");
 build("java:oraclejdk7", "java/java_oraclejdk7/");
-skip("java:oraclejdk8", "java/java_oraclejdk8/");
+build("java:oraclejdk8", "java/java_oraclejdk8/");
 skip("java:android",    "java/android/");
 
 # node
@@ -92,7 +92,7 @@ sub build {
 	# docker doesn't seem to exit with an error code
 	# if the Dockerfile fails to create an image.
 	# so let's proactively check to see if it exists.
-	@grep = `docker images | grep bradrydzewski/$name 2>&1`;
+	`docker images | grep bradrydzewski/$name 2>&1`;
 	if ( $? == 1 )
 	{
 		print @result[-50 .. -1];
