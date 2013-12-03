@@ -1,4 +1,4 @@
-FROM bradrydzewski/python
+FROM bradrydzewski/virtualenv
 WORKDIR /home/ubuntu
 USER ubuntu
 ADD .dronerc /home/ubuntu/

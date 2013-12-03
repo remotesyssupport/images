@@ -88,6 +88,16 @@ sub build {
 		print @result[-50 .. -1];
 		print "\033[31m ✗ FAILURE\033[0m $name\n";
 	}
+
+	# docker doesn't seem to exit with an error code
+	# if the Dockerfile fails to create an image.
+	# so let's proactively check to see if it exists.
+	@grep = `docker images | grep bradrydzewski/$name 2>&1`;
+	if ( $? == 1 )
+	{
+		print @result[-50 .. -1];
+		print "\033[31m ✗ FAILURE\033[0m $name\n";
+	}
 }
 
 sub skip {
