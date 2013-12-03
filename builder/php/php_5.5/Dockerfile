@@ -2,7 +2,7 @@ FROM bradrydzewski/phpenv
 
 WORKDIR /home/ubuntu
 USER ubuntu
-ADD .dronerc /home/ubuntu/
+ADD phpenv.sh /etc/drone.d/
 ENV HOME /home/ubuntu
 
 # install default php version

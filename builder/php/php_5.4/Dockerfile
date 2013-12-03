@@ -2,7 +2,7 @@ FROM bradrydzewski/phpenv
 
 WORKDIR /home/ubuntu
 USER ubuntu
-ADD .dronerc /home/ubuntu/
+ADD phpenv.sh /etc/drone.d/
 
 RUN export PATH=$PATH:/home/ubuntu/.phpenv/bin                                   && \
     php-build -i development --pear 5.4.22 /home/ubuntu/.phpenv/versions/5.4.22  && \
