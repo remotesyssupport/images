@@ -40,7 +40,7 @@ skip("java:oraclejdk8", "java/java_oraclejdk8/");
 skip("java:android",    "java/android/");
 
 # node
-build("node",      "node/node");
+build("nvm",       "node/nvm");
 build("node:0.10", "node/node_0.10/");
 build("node:0.8",  "node/node_0.8/");
 
@@ -50,7 +50,7 @@ build("php:5.4", "php/php_5.4/");
 build("php:5.5", "php/php_5.5/");
 
 # python
-build("python",      "python/python");
+build("virtualenv",  "python/virtualenv");
 build("python:2.7",  "python/python_2.7/");
 build("python:3.2",  "python/python_3.2/");
 build("python:3.3",  "python/python_3.3/");

@@ -8,11 +8,11 @@ remove("dart:stable");
 remove("dart:dev");
 
 # erlang
-skip("erlang:R16B02");
-skip("erlang:R16B01");
-skip("erlang:R16B");
+remove("erlang:R16B02");
+remove("erlang:R16B01");
+remove("erlang:R16B");
 skip("erlang:R15B");
-skip("kerl");
+remove("kerl");
 
 # gcc
 remove("gcc:4.6");
@@ -39,7 +39,7 @@ skip("java:android");
 # node
 remove("node:0.10");
 remove("node:0.8");
-remove("node");
+remove("nvm");
 
 # php
 remove("php:5.4");
@@ -51,7 +51,7 @@ remove("python:2.7");
 remove("python:3.2");
 remove("python:3.3");
 remove("python:pypy");
-remove("python");
+remove("virtualenv");
 
 # ruby
 remove("ruby:1.9.3");
