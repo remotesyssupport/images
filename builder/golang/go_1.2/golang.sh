@@ -1,6 +1,6 @@
 # enable go language support
 export GOROOT=/usr/local/go
-export GOPATH=/home/ubuntu
+export GOPATH=/var/cache/drone
 export PATH=$PATH:$GOROOT/bin
 
 [ -d $GOPATH/src ] || mkdir -p $GOPATH/src
