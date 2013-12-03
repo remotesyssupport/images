@@ -83,5 +83,5 @@ sub remove {
 
 sub skip {
 	$name=$_[0];
-	print "\033[33m - SKIPPED\033[0m $name\n";
+	print "\033[33m – SKIPPED\033[0m $name\n";
 }

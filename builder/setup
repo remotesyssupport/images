@@ -11,10 +11,10 @@ build("dart:stable", "dart/dart_stable/");
 build("dart:dev",    "dart/dart_dev/");
 
 # erlang
-skip("erlang:R16B02", "erlang/erlang_R16B02/")
-skip("erlang:R16B01", "erlang/erlang_R16B01/")
-skip("erlang:R16B",   "erlang/erlang_R16B/")
-skip("erlang:R15B",   "erlang/erlang_R15B/")
+skip("erlang:R16B02", "erlang/erlang_R16B02/");
+skip("erlang:R16B01", "erlang/erlang_R16B01/");
+skip("erlang:R16B",   "erlang/erlang_R16B/");
+skip("erlang:R15B",   "erlang/erlang_R15B/");
 
 # gcc
 build("gcc:4.6", "gcc/gcc_4.6/");
@@ -26,7 +26,7 @@ build("go:1.1", "golang/go_1.1/");
 build("go:1.0", "golang/go_1.0/");
 
 # groovy
-skip("groovy", "groovy/groovy/")
+skip("groovy", "groovy/groovy/");
 
 # haskell
 build("haskell:7.4", "haskell/haskell_7.4/");
