@@ -2,7 +2,7 @@ FROM bradrydzewski/rbenv
 
 WORKDIR /home/ubuntu
 USER ubuntu
-ADD .dronerc /home/ubuntu/
+ADD rbenv.sh /etc/drone.d/
 
 RUN export PATH=$PATH:/home/ubuntu/.rbenv/bin                                         && \
     export RBENV_VERSION=2.0.0-p353                                                   && \
