@@ -1,4 +1,4 @@
-FROM bradrydzewski/ruby
+FROM bradrydzewski/rbenv
 
 WORKDIR /home/ubuntu
 USER ubuntu
@@ -10,8 +10,6 @@ RUN export PATH=$PATH:/home/ubuntu/.rbenv/bin                                   
     CC=gcc rbenv install 1.9.3-p484                                                   && \
     rbenv rehash                                                                      && \
     rbenv global 1.9.3-p484                                                           && \
-    rbenv rehash                                                                      && \
-    gem update --system                                                               && \
     rbenv rehash                                                                      && \
     gem install bundler                                                               && \
     rbenv rehash

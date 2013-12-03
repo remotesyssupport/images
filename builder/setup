@@ -11,10 +11,11 @@ build("dart:stable", "dart/dart_stable/");
 build("dart:dev",    "dart/dart_dev/");
 
 # erlang
-skip("erlang:R16B02", "erlang/erlang_R16B02/");
-skip("erlang:R16B01", "erlang/erlang_R16B01/");
-skip("erlang:R16B",   "erlang/erlang_R16B/");
-skip("erlang:R15B",   "erlang/erlang_R15B/");
+build("kerl",          "erlang/kerl/");
+build("erlang:R16B",   "erlang/erlang_R16B/");
+build("erlang:R16B02", "erlang/erlang_R16B02/");
+build("erlang:R16B01", "erlang/erlang_R16B01/");
+build("erlang:R15B",   "erlang/erlang_R15B/");
 
 # gcc
 build("gcc:4.6", "gcc/gcc_4.6/");
@@ -32,37 +33,37 @@ skip("groovy", "groovy/groovy/");
 build("haskell:7.4", "haskell/haskell_7.4/");
 
 # java
-skip("java:openjdk6", "java/java_openjdk6/");
-skip("java:openjdk7", "java/java_openjdk7/");
+skip("java:openjdk6",   "java/java_openjdk6/");
+skip("java:openjdk7",   "java/java_openjdk7/");
 skip("java:oraclejdk7", "java/java_oraclejdk7/");
 skip("java:oraclejdk8", "java/java_oraclejdk8/");
-skip("java:android", "java/android/");
+skip("java:android",    "java/android/");
 
 # node
-build("node", "node/node");
+build("node",      "node/node");
 build("node:0.10", "node/node_0.10/");
-build("node:0.8", "node/node_0.8/");
+build("node:0.8",  "node/node_0.8/");
 
 # php
-build("php", "php/php");
+build("phpenv",  "php/phpenv");
 build("php:5.4", "php/php_5.4/");
 build("php:5.5", "php/php_5.5/");
 
 # python
-build("python", "python/python");
-build("python:2.7", "python/python_2.7/");
-build("python:3.2", "python/python_3.2/");
-build("python:3.3", "python/python_3.3/");
+build("python",      "python/python");
+build("python:2.7",  "python/python_2.7/");
+build("python:3.2",  "python/python_3.2/");
+build("python:3.3",  "python/python_3.3/");
 build("python:pypy", "python/pypy/");
 
 # ruby
-build("ruby", "ruby/ruby");
+build("rbenv",      "ruby/rbenv");
 build("ruby:1.9.3", "ruby/ruby_1.9.3/");
 build("ruby:2.0.0", "ruby/ruby_2.0.0/");
 
 # scala
 build("scala:2.10.3", "scala/scala_2.10.3/");
-build("scala:2.9.3", "scala/scala_2.9.3/");
+build("scala:2.9.3",  "scala/scala_2.9.3/");
 
 
 # function to create Docker images and print out
@@ -89,5 +90,5 @@ sub build {
 sub skip {
 	$name=$_[0];
 	$path=$_[1];
-	print "\033[33m - SKIPPED\033[0m $name\n";
+	print "\033[33m – SKIPPED\033[0m $name\n";
 }

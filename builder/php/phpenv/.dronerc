@@ -15,5 +15,7 @@ export PATH=$PATH:$GOROOT/bin
 
 # enable java support via JAVA_HOME, MAVEN_HOME, etc
 
-# default erlang version
-. /opt/R14B01/activate
+
+# add phpenv to the path
+export PATH=$PATH:/home/ubuntu/phpenv/bin
+phpenv init -

@@ -12,6 +12,7 @@ skip("erlang:R16B02");
 skip("erlang:R16B01");
 skip("erlang:R16B");
 skip("erlang:R15B");
+skip("kerl");
 
 # gcc
 remove("gcc:4.6");
@@ -36,14 +37,14 @@ skip("java:oraclejdk8");
 skip("java:android");
 
 # node
-remove("node");
 remove("node:0.10");
 remove("node:0.8");
+remove("node");
 
 # php
 remove("php:5.4");
 remove("php:5.5");
-remove("php");
+remove("phpenv");
 
 # python
 remove("python:2.7");
@@ -55,7 +56,7 @@ remove("python");
 # ruby
 remove("ruby:1.9.3");
 remove("ruby:2.0.0");
-remove("ruby");
+remove("rbenv");
 
 # scala
 remove("scala:2.10.3");

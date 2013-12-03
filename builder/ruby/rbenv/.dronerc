@@ -15,5 +15,12 @@ export PATH=$PATH:$GOROOT/bin
 
 # enable java support via JAVA_HOME, MAVEN_HOME, etc
 
-# default erlang version
-. /opt/R14A/activate
+
+# add rbenv to path
+export PATH="/home/ubuntu/.rbenv/bin:$PATH"
+
+# set default env vars
+export RAILS_ENV=test
+
+# initialize and set ruby version
+eval "$(rbenv init -)"

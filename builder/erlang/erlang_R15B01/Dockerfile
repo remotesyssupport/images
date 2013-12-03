@@ -1,4 +1,4 @@
-FROM bradrydzewski/erlang
+FROM bradrydzewski/kerl
 
 WORKDIR /home/ubuntu
 USER ubuntu
