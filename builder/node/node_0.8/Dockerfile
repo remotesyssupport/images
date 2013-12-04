@@ -1,4 +1,4 @@
-FROM bradrydzewski/nvm
+FROM bradrydzewski/base
 
 WORKDIR /home/ubuntu
 USER ubuntu
