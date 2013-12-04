@@ -1,4 +1,4 @@
-FROM bradrydzewski/rbenv
+FROM bradrydzewski/base
 
 WORKDIR /home/ubuntu
 USER ubuntu
