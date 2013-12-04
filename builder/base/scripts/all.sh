@@ -42,7 +42,7 @@ sudo apt-get -y install git git-core subversion mercurial bzr fossil xvfb socat
 # install browsers
 ./chromium.sh
 ./firefox.sh
-./chrome.sh
+#./chrome.sh
 ./phantomjs.sh
 
 # install base languages
