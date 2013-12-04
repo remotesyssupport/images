@@ -16,4 +16,4 @@ ENV LOGNAME ubuntu
 ENV TERM xterm
 
 ADD scripts /var/cache/drone/scripts
-RUN cd /var/cache/drone/scripts && sudo chmod +x *.sh && ./all.sh && rm -rf /var/cache/drone/scripts
+RUN cd /var/cache/drone/scripts && sudo chmod +x *.sh && ./all.sh && sudo rm -rf /var/cache/drone/scripts
