@@ -7,7 +7,7 @@ sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /et
 sudo apt-get update
 
 # install chrome unstable
-sudo apt-get -y install google-chrome-stable
+#sudo apt-get -y install google-chrome-stable
 
 # install chrome driver
 wget http://chromedriver.storage.googleapis.com/2.7/chromedriver_linux64.zip --quiet
